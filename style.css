@@ -1,3 +1,12 @@
+:root{
+  --dark: #05080fff;
+  --light: #ebdec5ff;
+  --availible: #36cf52ff;
+  --away: #f2cf44ff;
+  --alert: #da3e52ff;
+  --unavailible: rgb(120, 130, 153);
+}
+
 html {
   border: solid black 2px;
   display: flex;
@@ -12,7 +21,9 @@ header {
   height: 7vh;
   width: inherit;
 }
-
+header h2{
+  
+}
 body {
   display: flex;
   flex-direction: column;
