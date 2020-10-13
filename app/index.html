@@ -4,60 +4,84 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TOS Code</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Playfair+Display:ital,wght@0,500;1,400;1,500&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Playfair+Display:ital,wght@0,500;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <header>
-      <h2><a href="#">Time Keeper</a></h2>
+    <h2><a href="#">Time Keeper</a></h2>
     <!-- <h2>Shift Tracker</h2> -->
-    <nav class="dropDown">
-      <figure class="status"></figure>
-        <p>menu selection</p>
+    <nav class="dropDown-wrapper">
+      <div class="dropDown-selected">
+        <div class="dropDown-selected_trigger">
+          <figure class="status"></figure>
+          <p>menu selection</p>
+        </div>
+        <div class="custom-options">
+          <span class="custom-option" data-value="work">Work</span>
+          <span class="custom-option" data-value="break">Break</span>
+          <span class="custom-option selected" data-value="unavalible">Unavalible</span>
+        </div>
+      </div>
     </nav>
     <!-- One load === unavalible -->
   </header>
   <body>
-      <div class="container">
+    <div class="container">
+      <aside class="sideNav">
+        <div>
+          <!-- <h3>sideNav button(s)</h3> -->
+          <h6>JobCount</h6>
+          <h6>Audit StopWatch</h6>
+        </div>
+      </aside>
 
-        <aside class="sideNav">
+      <div class="TOS-Container">
+        <div class="TOS-Info">
+          <h3>Todays Shift</h3>
+          <hr />
+          <ul>
+            <li>list item</li>
+          </ul>
+          <!-- <h3>Today's Shift</h3> -->
+          <!-- TOS BAR DISPLAY -->
+          <!-- LIST CONTAINER of TIMECODES -->
+        </div>
+
+        <div class="records" id="Codes">
+          <h3>Previous Sessions</h3>
+          <hr />
+          <div id="record-container"></div>
+          <!-- ADD ICONS -->
+          <nav class="recordNav">
             <div>
-              <!-- <h3>sideNav button(s)</h3> -->
-              <h6>JobCount</h6>
-              <h6>Audit StopWatch</h6>
+              <img
+                src="../imageAssets/pagantion_icons/skip_to_first.png"
+                alt="Skip to First"
+              />
             </div>
-          </aside>
-
-          <div class="TOS-Container">
-
-              <div class="TOS-Info">
-                <h3>Todays Shift</h3>
-                <hr>
-                <ul>
-                    <li>
-                        list item
-                    </li>
-                </ul>
-              <!-- <h3>Today's Shift</h3> -->
-              <!-- TOS BAR DISPLAY -->
-              <!-- LIST CONTAINER of TIMECODES -->
+            <div>
+              <img
+                src="../imageAssets/pagantion_icons/Previous.png"
+                alt="Previous"
+              />
             </div>
-
-            <div class="records" id="Codes">
-              <h3>Previous Sessions</h3>
-              <hr>
-                <div id="record-container"></div>
-                <!-- ADD ICONS -->
-                <nav class="recordNav">
-                  <div><img src="../imageAssets/pagantion_icons/skip_to_first.png" alt="Skip to First"></div>
-                  <div><img src="../imageAssets/pagantion_icons/Previous.png" alt="Previous"></div>
-                  <div id="recordsPageNumber">1 of 1</div>
-                  <div><img src="../imageAssets/pagantion_icons/Next.png" alt="Next"></div>
-                  <div><img src="../imageAssets/pagantion_icons/skip_to_last.png" alt="Skip to Last"></div>
-                </nav>
+            <div id="recordsPageNumber">1 of 1</div>
+            <div>
+              <img src="../imageAssets/pagantion_icons/Next.png" alt="Next" />
             </div>
-
-          </div>
-            <div></div>
+            <div>
+              <img
+                src="../imageAssets/pagantion_icons/skip_to_last.png"
+                alt="Skip to Last"
+              />
+            </div>
+          </nav>
+        </div>
       </div>
+      <div></div>
+    </div>
   </body>
 </html>

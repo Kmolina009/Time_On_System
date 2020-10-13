@@ -16,6 +16,7 @@ font-family: 'Playfair Display', serif; */
 
 }
 
+
 html {
   border: solid black 2px;
   display: flex;
@@ -27,7 +28,6 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 10vh;
   width: 100vw;
 }
 header h2{
@@ -49,6 +49,18 @@ header h2 a:hover{
   cursor: pointer;
 }
 /*************** DropDown Menu ************/
+.dropDown-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-items: start;
+    align-items: baseline;
+    color:var(--light);
+    border-left-style: solid;
+    border-left-color: var(--light);
+    border-left-width: 1px;
+    line-height: 50%;
+    width: 20%;
+}
 header .dropDown{
   display: flex;
   flex-direction: row;
@@ -65,20 +77,38 @@ header .dropDown{
 .dropDown p{
 font-size: 150%;
 }
-header .dropDown:hover{
+.dropDown-wrapper:hover{
 background-color: rgb(24, 50, 58);
 cursor:pointer;
 }
+.dropDown-selected{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  line-height: 50%;
+}
+.dropDown-selected_trigger{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100vw;
+}
 
+.dropDown-selected_trigger p{
+  font-size: x-large;
+}
 /* Make the sizing proportional to changing screen. May consider DOM Manipulation for this. */
 header .status{
-  height: 2vh;
+  height: 2.5vh;
   width: 1vw;
   line-height: 200px;
   margin:0px 10px;
   border-radius: 50%;
   background-color:var(--unavailible);
 }
+
+/* Drop down options/selections */
+
 /************ Body Element **************/
 body {
   display: flex;
@@ -205,4 +235,8 @@ width: 100%;
 .recordNav div:nth-child(-n+2):hover,.recordNav div:nth-child(n+4):hover,.sideNav div h6:hover{
   background-color:white;
   cursor: pointer;
+ }
+ /*Hide Element*/
+ .custom-options{
+   display: none;
  }
